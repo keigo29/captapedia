@@ -1,0 +1,25 @@
+$sp: 800px;
+
+@mixin sp { // モバイルだった時の定義
+  @media screen and (max-width: #{$sp}) {
+    @content;
+  }
+}
+
+header {
+  .title {
+    font-family:"Robot Mono";
+    font-weight: bold;
+    font-size: 16px;
+      margin-top: 10px;
+      // margin-bottom: 5px;
+      margin-left: 30px;
+  }
+
+  @include sp {
+    .title {
+      font-family: "Roboto Mono";
+      font-weight: 600;
+    }
+  }
+}

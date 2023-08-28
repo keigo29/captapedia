@@ -1,0 +1,90 @@
+.main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.main .flexcon {
+  display: flex;
+}
+
+.main .img {
+  margin: 0 auto;
+  padding-top: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.main .categoli {
+  padding-top: 15px;
+}
+
+.main .categoli .contain {
+  margin-top: 5px;
+  border-radius: 20px;
+  height: 133px;
+  width: 110px;
+  font-size: 12px;
+  font-weight: 800;
+  background-color: white;
+  border: solid 1px #00b2eb;
+  box-shadow: 0px 5px 29px 7px rgba(0, 176, 235, 0.0858);
+}
+
+.main .categoli .contain .title {
+  width: 90px;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 10px;
+  color: #00b0eb;
+}
+
+.main .page {
+  padding-top: 5px;
+}
+
+.main .page .h4 {
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.main .page .card {
+  text-align: center;
+  box-shadow: 0px 6px 9px 3px rgba(97, 97, 97, 0.1);
+  padding: 4px;
+  padding-bottom: 6px;
+  background-color: white;
+  width: 150px;
+  height: 200px;
+  border-radius: 20px;
+}
+
+.main .page .card .img {
+  padding-bottom: 5px;
+  padding-top: 15px;
+}
+
+.main .page .card .h4 {
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.main .page .card .content {
+  font-size: 2px;
+  padding-bottom: 10px;
+  transform: scale(0.8);
+}
+
+.main .page .card .button {
+  box-shadow: 0px 3px 11px 2px rgba(0, 176, 235, 0.37);
+  background: #00b0eb;
+  background: linear-gradient(153deg, #00b0eb 0%, deepskyblue 100%);
+  font-size: 0.5rem;
+  width: 80px;
+  margin: 0 auto;
+  color: white;
+  height: 20px;
+  line-height: 2;
+  border-radius: 20px;
+  margin-bottom: 5px;
+}

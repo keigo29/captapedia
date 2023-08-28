@@ -1,0 +1,67 @@
+html {
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+
+body {
+    margin:0;
+}
+
+h1 {
+    text-align: center;
+}
+
+
+/* MuiのCSS */
+.mui-slider {
+    background-color: #a0a0a024;
+    padding: 2rem 2rem 0;
+    border-radius: 2rem 2rem 0 0;
+    margin: 1rem 1rem 0 1rem;
+}
+
+.mui-slider > span{
+    margin-top: 30px;
+    color: black;
+}
+
+.mui-slider > span > span:nth-child(4n){
+    bottom:30px;
+    top:auto;
+}
+
+.mui-slider > span > span.MuiSlider-markLabel{
+    background-color: #f4b737;
+    padding: 3px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px #884f0099;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+
+
+.mui-slider > button,button.sample_button {
+    background-color: #f6b600;
+    color:black;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    display:block;
+    margin:2rem auto 0;
+    padding: 0.2rem 2rem;
+}
+
+.mui-slider > button:hover,button.sample_button:hover{
+    background-color: #f6b600;
+}
+
+
+button.sample_button {
+    font-size: .75em;
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    padding: 0;
+    box-sizing: border-box;
+    border: solid 1.5px #f4b737;
+    margin: 7% 15%;
+}
+button.sample_button.active{
+    background-color: #f2f2f2;
+    border: solid 1.5px #f4b737;
+}
