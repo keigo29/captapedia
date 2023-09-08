@@ -1,0 +1,7 @@
+{
+    "functions": {
+      "api/serverside.js": {
+        "memory": 1024
+      }
+    }
+  }

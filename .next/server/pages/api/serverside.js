@@ -54,7 +54,7 @@ const { Catalog } = __webpack_require__(45);
 const { Page } = __webpack_require__(516);
 const cors = __webpack_require__(582);
 app.use(cors({
-    origin: "http://localhost:8090",
+    origin: "https://captapedia.vercel.app/",
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }));
 app.use(express.json());
