@@ -47,8 +47,8 @@ class Catalog {
     }
   }
 
-  async deleteCatalog() {
-    const query = `DELETE FROM catalog WHERE id = ?`;
+  async deleteAllCatalog() {
+    const query = `DELETE FROM catalog `;
     try {
       await new Promise((resolve, reject) => {
         db.run(query, [this.id], (err) => {
@@ -60,6 +60,23 @@ class Catalog {
         });
       });
       console.log(`Catalog entry with id ${this.id} has been deleted.`);
+    } catch (err) {
+      console.error(err.message);
+    }
+  }
+  async deleteCatalogEvery() {
+    const query = `DROP TABLE catalog `;
+    try {
+      await new Promise((resolve, reject) => {
+        db.run(query, (err) => {
+          if (err) {
+            reject(err);
+          } else {
+            resolve();
+          }
+        });
+      });
+      console.log(`Catalog table has been deleted.`);
     } catch (err) {
       console.error(err.message);
     }

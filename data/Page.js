@@ -112,5 +112,21 @@ class Page {
       throw new Error(`Error fetching all pages: ${error.message}`);
     }
   }
+  async  deleteAllPage() {
+    try {
+      const query = `Delete FROM page`;
+      return await new Promise((resolve, reject) => {
+        db.run(query, (err, rows) => {
+          if (err) {
+            reject(err);
+          } else {
+            resolve(rows);
+          }
+        });
+      });
+    } catch (error) {
+      throw new Error(`Error delete all pages: ${error.message}`);
+    }
+  }
 }
 exports.Page = Page
