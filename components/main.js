@@ -5,7 +5,8 @@ import addImage from "../public/img/ic_baseline-plus.svg";
 import X from "../public/img/x.png";
 import Image from 'next/image';
 
-
+const apiPort=process.env.PORT||8091;
+const Port=process.env.PORT||8090;
 
 
 const Pages = (props) => {
@@ -109,7 +110,7 @@ const PostP =(props)=>{
     const handleSubmit=async(e)=>{
        e.preventDefault();
        try {
-        const response = await fetch('http://localhost:8091/api/addPageData', {
+        const response = await fetch(`${apiPort}/api/addPageData`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -181,7 +182,7 @@ const Categolies = (props) => {
         async function fetchData() {
          
             try {
-                const response = await fetch(`http://localhost:8091/api/selectpages/${ids}`);
+                const response = await fetch(`${apiPort}/api/selectpages/${ids}`);
                 const data = await response.json();
                 // console.log(data);
                 setSelectedCatalogs(data);
@@ -258,7 +259,7 @@ const PostC =()=>{
     const handleSubmit=async(e)=>{
        e.preventDefault();
        try {
-        const response = await fetch('http://localhost:8091/api/addData', {
+        const response = await fetch(`${apiPort}/api/addData`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -327,7 +328,7 @@ export default function Main() {
     useEffect(() => {
         async function fetchData() {
             try {
-                const response = await fetch('http://localhost:8091/api/catalogs');
+                const response = await fetch(`${apiPort}/api/catalogs`);
                 const data = await response.json();
                 // console.log(data);
                 setCatalogs(data);
@@ -345,7 +346,7 @@ export default function Main() {
     useEffect(() => {
         async function fetchData() {
             try {
-                const response = await fetch('http://localhost:8091/api/pages');
+                const response = await fetch(`${apiPort}/api/pages`);
                 const data = await response.json();
                 // console.log(data);
                 setPages(data);
