@@ -35,7 +35,7 @@ app.get("/api/catalogs", async (req, res) => {
 app.post("/api/catalogs", async (req, res) => {
     try {
         const newData = req.body;
-      
+    
         const addCatalogs = await db1.addCatalog(newData);
         res.json(addCatalogs);
     } catch (error) {
